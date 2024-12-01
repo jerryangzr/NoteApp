@@ -43,7 +43,7 @@ fun NotesApp(viewModel: NoteScreenViewModel) {
 
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+fun NoteAppPreview() {
     NoteAppTheme {
         NoteScreenPreview()
     }
