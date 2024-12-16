@@ -8,6 +8,7 @@ import com.example.noteapp.repository.NoteRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.launch
@@ -19,7 +20,7 @@ class NoteScreenViewModel @Inject constructor(
 ): ViewModel() {
 //    var noteList = mutableStateListOf<Note>()
     private val _noteList = MutableStateFlow<List<Note>>(emptyList())
-    val noteList = _noteList.asStateFlow()
+    val noteList: StateFlow<List<Note>> = _noteList.asStateFlow()
 
     init {
 //        noteList.addAll(NoteDataSource().loadNotes())

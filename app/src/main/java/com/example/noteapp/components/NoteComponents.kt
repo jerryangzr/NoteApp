@@ -62,7 +62,6 @@ fun NoteButton(
     onClick: () -> Unit = {}
 ) {
     val context = LocalContext.current
-
     Button(
         modifier = modifier,
         onClick = onClick,
